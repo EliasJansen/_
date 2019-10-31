@@ -1,0 +1,1457 @@
+html[data-theme='dark'] {
+
+    --bg-panel: #434343;
+    --color-headings: #333;
+    --color-text: #B5B5B5;
+}
+
+
+
+.container{
+    background-color: var(--bg-panel);
+}
+
+
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+  margin-right: 1rem;
+}
+
+.toggle:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.mode {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+}
+
+.toggle-container {
+  position: absolute;
+  left: 0.5rem;
+  top: 2rem;
+
+}
+
+input:checked + label {
+	background: var(--color-headings);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+
+body {
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(177, 176, 175);
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes example {
+  0%   {background-color: #111;}
+  25%  {background-color: #444;}
+  50%  {background-color: #333;}
+  75% {background-color: rgb(233, 182, 28)}
+  80% {background-color: rgb(233, 182, 28)}
+  100% {background-color: #222;}
+}
+
+.menu {
+	position: absolute;
+	top: 1rem;
+	right: 4rem;
+
+}
+
+
+nav {
+	background-color: #333;
+	width: 1vh;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5rem;
+  z-index: 100;
+}
+
+nav.onzichtbaar {
+	display: none;
+
+}
+
+main {
+	min-height: 80vh;
+	padding: 3rem;
+}
+
+
+header {
+  padding-top: 1rem;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1rem;
+	margin-right: 3rem;
+	padding: 1rem;
+  display: block;
+  	margin-bottom: 3rem;
+    font-family: 'Roboto Condensed', sans-serif;
+
+
+}
+
+header nav a:hover {
+  color: yellow;
+  border-bottom: 1px solid white;
+}
+
+
+main nav {
+	background-color: white;
+	width: 25vw;
+	height: 300vh;
+	position: fixed;
+	right: 0;
+	padding: 5rem;
+}
+
+nav.onzichtbaar {
+	display: none;
+}
+
+
+.text1 {
+  display: none;
+}
+h1 a {
+  top: 3rem;
+  text-decoration: none;
+  color: white;
+font-family: 'Roboto Condensed', sans-serif;
+padding-left: 3rem;
+margin-left: 6rem;
+margin-top: 1rem;
+font-size: 1rem;
+}
+
+
+h2 {
+display: none;
+   }
+
+h3 {
+font-family: 'Roboto Condensed', sans-serif;
+color: white;
+margin-left: 9.1rem;
+margin-top: 0.1rem;
+font-size: 0.8rem;
+}
+
+
+
+.logo {
+position: absolute;
+left: 6rem;
+top: 1rem;
+width: 3rem;
+
+}
+
+ ul li a {
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 4rem;
+  display: none;
+
+
+
+}
+
+ul {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  right: 12rem;
+  top: 1rem;
+  border-bottom: 1px solid white;
+
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  margin-right: 0;
+
+}
+
+@keyframes image {
+  0% {left: -2000px}
+  0% {left: 0px}
+}
+
+@keyframes foto {
+  0% {top: -1000px}
+  0% {top: 0px}
+}
+
+@keyframes pic {
+  0% {top: 10px}
+  0% {top: 0px}
+}
+
+
+.gallery {
+  margin-top: 13rem;
+  margin-left: 4rem;
+  height: 40rem;
+}
+
+.gallery img {
+  width: 40%;
+}
+
+.image1 {
+position: absolute;
+top: 35rem;
+left: 2rem;
+animation-name: image;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+transition: transform 2s;
+z-index: 100;
+}
+
+.image2 {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  animation-name: image;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition: transform 2s;
+  width: 60%;
+}
+
+.image2:hover {
+   transform: translate(10px, 50px);
+}
+
+.image3 {
+  position: absolute;
+  top: 25rem;
+  left: 16rem;
+  animation-name: foto;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: transform 1s;
+}
+
+.image3:hover {
+   transform: rotate(20deg) scale(1.2);
+}
+
+
+.image4 {
+  position: absolute;
+  top: 18rem;
+  left: 3rem;
+  animation-name: pic;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition: transform 2s
+}
+
+.image4:hover {
+   transform: translate(50px, 10px);
+}
+
+.image5 {
+display: block;
+position: absolute;
+top: 20rem;
+left: 10rem;
+z-index: 9;
+transition: transform 1s;
+animation-name: pic;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+width: 50%;
+}
+
+.image5:hover {
+   transform: translate(10px, 50px);
+}
+
+
+.image6 {
+  display: none;
+}
+
+.image7 {
+  position: absolute;
+  left: 5rem;
+  top: 40rem;
+  margin-bottom: 10rem;
+  animation-name: foto;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: transform 1s;
+}
+
+.image7:hover {
+   transform: translate(10px, 50px);
+}
+
+.image8 {
+  position: absolute;
+  top: 30rem;
+  margin-left: 2rem;
+  animation-name: image;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition: transform 1s;
+  width: 60%;
+}
+
+.image8:hover {
+   transform: scale(1.5);
+}
+
+
+footer {
+background-color: #333;
+height: 7rem;
+color: white;
+font-family: 'Roboto Condensed', sans-serif;
+text-align: center;
+display: grid;
+padding-top: 2rem;
+padding-bottom: 2rem;
+padding-left: 0rem;
+}
+
+footer  a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+}
+
+.contact p {
+  padding-top: 0.8rem;
+
+}
+
+.contact p:first-child {
+  font-size: 1.5rem;
+}
+
+
+.overmij {
+  width: 15rem;
+  border-right: 1px solid white;
+  margin-bottom: 6rem;
+  color: white;
+  padding-right: 1rem;
+  margin-top: 8rem;
+  animation-name: overmij;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes overmij {
+0% {left:-1000px;}
+100% {left:0px;}
+}
+
+.overmij h1 {
+  font-family: 'Marvel', sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+
+}
+.overmij p {
+font-family:  'Roboto Condensed', sans-serif;
+}
+
+.vaardigheden {
+  border-left: 1px solid white;
+  padding-left: 1rem;
+  margin-bottom: 6rem;
+  color: white;
+  animation-name: vaar;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes vaar {
+  0% { right: -1000px;}
+  100% { right: 0px;}
+}
+
+.vaardigheden h1 {
+font-family: 'Marvel', sans-serif;
+font-size: 1.5rem;
+
+
+}
+.skillbox {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 20px 0 30px 10px;
+}
+.skillbox p {
+  font-size: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  padding-bottom: 0.1rem;
+}
+
+
+.skill {
+  padding: 4px;
+  box-sizing: border-box;
+  border: 2px solid #d8d8d8;
+  border-radius: 2px;
+  width: 20rem;
+  width: 90%;
+
+}
+.skill_level {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+
+}
+
+.studies {
+  margin-top: 3rem;
+  margin-left: 2rem;
+  border-right: 1px solid white;
+  width: 20.5rem;
+  padding-right: 1rem;
+  margin-bottom: 8rem;
+  color:white;
+  animation-name: overmij;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.split {
+  display: none;
+}
+.studies h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.studies div {
+      font-family: 'Roboto Condensed', sans-serif;
+      margin-bottom: 1.5rem;
+}
+
+.form {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  margin-left: 2rem;
+  margin-top: 10rem;
+}
+
+.form h3 {
+  position: relative;
+  top: -2rem;
+  left: -12rem;
+  font-size: 1.5rem;
+  width: 20rem;
+}
+
+.form label {
+  margin-right: 2rem;
+}
+
+.form input, textarea {
+  border-radius: 10%;
+  border: 2px dashed rgb(233, 182, 28);
+  margin-bottom: 2rem;
+}
+
+.form textarea {
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+.submit {
+padding: 1rem;
+font-family: 'Roboto Condensed', sans-serif;
+
+}
+.fixed {
+      position: fixed;
+         background-image: linear-gradient(180deg,  #333 0%,rgb(89, 93, 91) 100%);
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 17vw;
+      z-index: 20;
+}
+
+.menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu:hover {
+  transform: rotate(10deg);
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 900px) {
+    body {
+      background-color:  rgb(177, 176, 175);
+      margin-left: auto;
+      margin-right: auto;
+
+
+    }
+
+    .menu {
+    	position: absolute;
+    	top: 3rem;
+    	right: 2rem;
+    }
+
+
+    h1 a {
+      top: 3rem;
+      text-decoration: none;
+      color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    left: 4rem;
+    top: 1rem;
+    font-size: 3rem;
+    }
+
+    h2 {
+    writing-mode: tb-rl;
+    font-family: 'Yatra One', cursive;
+    font-size: 8rem;
+    color: white;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    display:block;
+       }
+
+    h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    position: absolute;
+    left: 4.3rem;
+    top: 4.5rem;
+    font-size: 1.2rem;
+    }
+
+
+    .mode {
+      position: fixed;
+      top: 2rem;
+      font-size: 0.5rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+    }
+
+    .toggle-container {
+      position: absolute;
+      left: 0.5rem;
+      top: 3rem;
+
+    }
+
+    .menu {
+    	position: fixed;
+    	top: 3rem;
+    	right: 9rem;
+    }
+
+
+
+
+    .logo {
+    position: absolute;
+    left: 9rem;
+    top: 1rem;
+    width: 4rem;
+    }
+
+     ul li a {
+      text-decoration: none;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      font-size: 1.2rem;
+      margin-left: 4rem;
+      display: block;
+    }
+
+    ul {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      right: 12rem;
+      top: 1rem;
+      border-bottom: 1px solid #333;
+    }
+
+    li {
+      list-style-type: none;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      margin-right: 0;
+    }
+
+
+    .gallery {
+      margin-top: 13rem;
+      margin-left: 4rem;
+      height: 90rem;
+      width: 20rem;
+
+    }
+
+
+@keyframes image {
+  0% {left: -2000px}
+  0% {left: 0px}
+}
+
+@keyframes foto {
+  0% {top: -1000px}
+  0% {top: 0px}
+}
+
+@keyframes pic {
+  0% {top: 10px}
+  0% {top: 0px}
+}
+
+
+    .image1 {
+    position: absolute;
+    top: 15rem;
+    animation-name: image;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+
+    .image2 {
+      position: absolute;
+      top: 15rem;
+      left: 30rem;
+      animation-name: image;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      transition: transform 2s;
+    }
+
+    .image2:hover {
+       transform: translate(10px, 50px);
+    }
+
+    .image3 {
+      position: absolute;
+      top: 12rem;
+      left: 25rem;
+      animation-name: foto;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      transition: transform 1s;
+    }
+
+    .image3:hover {
+       transform: rotate(20deg) scale(1.2);
+    }
+
+
+    .image4 {
+      position: absolute;
+      top: 30rem;
+      left: 10rem;
+      animation-name: pic;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      transition: transform 2s
+    }
+
+    .image4:hover {
+       transform: translate(50px, 10px);
+    }
+
+    .image5 {
+    display: block;
+    position: absolute;
+    top: 40rem;
+    left: 27rem;
+    z-index: 9;
+    transition: transform 1s;
+    animation-name: pic;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+
+    .image5:hover {
+       transform: translate(10px, 50px);
+    }
+
+
+    .image6 {
+      display: none;
+    }
+
+    .image7 {
+      position: absolute;
+      left: 5rem;
+      top: 50rem;
+      margin-bottom: 10rem;
+      animation-name: foto;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      transition: transform 1s;
+    }
+
+    .image7:hover {
+       transform: translate(10px, 50px);
+    }
+
+    .image8 {
+      position: absolute;
+      top: 50rem;
+      margin-left: 20rem;
+      animation-name: image;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      transition: transform 1s;
+    }
+
+    .image8:hover {
+       transform: scale(1.5);
+    }
+
+    footer {
+    background-color: #333;
+    height: 7rem;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0rem;
+    margin-top: 0rem;
+
+    }
+
+    footer  a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      padding-top: 0.8rem;
+    }
+
+    .contact p {
+      padding-top: 0.8rem;
+
+    }
+
+    .contact p:first-child {
+      font-size: 1.5rem;
+    }
+
+
+    .overmij {
+      width: 20rem;
+      border-right: 1px solid white;
+      padding-left: 2rem;
+      padding-right: 1rem;
+      margin-bottom: 3rem;
+      color: white;
+      margin-top: 10rem;
+    }
+
+    .overmij h1 {
+      font-family: 'Marvel', sans-serif;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .overmij p {
+      font-family:'Roboto Condensed', sans-serif;
+    }
+
+    .vaardigheden {
+      margin-left: 23rem;
+      border-left: 1px solid white;
+      padding-left: 1rem;
+      color: white;
+    }
+    .vaardigheden h1 {
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
+    padding-left: 0.3rem;
+    }
+    .skillbox {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 20px 0 30px 10px;
+    }
+    .skillbox p {
+      font-size: 'Marvel', sans-serif;
+      letter-spacing: 1px;
+      padding-bottom: 0.1rem;
+    }
+
+    .split {
+      position: absolute;
+      top: 23.6rem;
+      left: 5rem;
+      display: block;
+
+    }
+
+    .split img {
+      width: 70%;
+    }
+
+    .text1 {
+      color: white;
+      font-size: 80px;
+      position: absolute;
+      top: 5rem;
+      left: ;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: transform 1.5s;
+      text-align: center;
+      font-family: 'Yatra One', cursive;
+      background-color: #0;
+      display: block;
+
+
+    }
+
+    .text1:hover {
+      transform: rotate(90deg) scale(2) translateY(-50%) translateX(50%);
+    }
+
+     .gallery img {
+       width: 80%;
+     }
+
+    .image1:hover .text1 {
+      opacity: 1;
+      z-index: 100;
+    }
+
+    .text {
+      color: #333;
+      font-size: 170px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      transition: transform 3s;
+      text-align: center;
+      font-family: 'Yatra One', cursive;
+
+    }
+
+    .text:hover {
+      transform:translate(-10px, -40px);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #0;
+    }
+
+    .split:hover .overlay {
+      opacity: 1;
+    }
+
+    .skill {
+      padding: 4px;
+      box-sizing: border-box;
+      border: 1px solid #d8d8d8;
+      border-radius: 2px;
+      width: 400px;
+    }
+    .skill_level {
+      width: 100%;
+      height: 10px;
+      background-color: white;
+
+    }
+
+    .studies {
+      margin-top: 3rem;
+      margin-left: -8rem;
+      border-right: 1px solid white;
+      width: 30rem;
+      text-align: right;
+      padding-right: 1rem;
+      margin-bottom: 15rem;
+      color: white;
+
+    }
+    .studies h1 {
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+    .studies div {
+          font-family: 'Roboto Condensed', sans-serif;
+          margin-bottom: 1.5rem;
+    }
+
+    .form {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+    }
+
+    .form h3 {
+      position: relative;
+      top: -2rem;
+      left: -12rem;
+    }
+
+    .form input, textarea {
+      border-radius: 10%;
+      border: 2px dashed rgb(233, 182, 28);
+    }
+
+    .form textarea {
+      width: 30%;
+      margin-top: 1rem;
+    }
+
+
+
+    .fixed {
+          position: fixed;
+             background-image: linear-gradient(180deg,  #333 0%,rgb(89, 93, 91) 100%);
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 9vw;
+          z-index: 20;
+    }
+
+    .bericht {
+      position: relative;
+      top: -6rem;
+      margin-right: 2rem;
+
+    }
+
+    textarea {
+      width: 30%;
+    }
+
+  }
+}
+
+
+@supports (grid-area: auto) {
+
+@media (min-width: 1200px) {
+body {
+  background-color: rgb(177, 176, 175);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.menu {
+	position: fixed;
+	top: 3rem;
+	right: 9rem;
+}
+
+h1 a {
+  top: 3rem;
+  text-decoration: none;
+  color: white;
+font-family: 'Roboto Condensed', sans-serif;
+position: absolute;
+left: 15rem;
+top: 1rem;
+font-size: 3rem;
+}
+
+h2 {
+writing-mode: tb-rl;
+font-family: 'Yatra One', cursive;
+font-size: 10rem;
+color: white;
+letter-spacing: 0.2rem;
+position: absolute;
+top: 10rem;
+right: 5rem;
+text-transform: uppercase;
+margin-right: 2rem;
+display: block;
+z-index: 16;
+   }
+
+h3 {
+font-family: 'Roboto Condensed', sans-serif;
+color: white;
+position: absolute;
+left: 15.3rem;
+top: 4.5rem;
+font-size: 1.2rem;
+}
+
+.mode {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+
+
+.logo {
+position: absolute;
+left: 20rem;
+top: 1rem;
+width: 4rem;
+}
+
+
+.gallery {
+  margin-top: 13rem;
+  margin-left: 4rem;
+  height: 65rem;
+}
+
+.image1 {
+top: 20rem;
+transition: transform 0.1s;
+}
+
+.image1:hover {
+
+transform: rotate(1deg) scale(1) ;
+}
+
+.ja {
+  position: absolute;
+  top: 20rem;
+  height: 1rem;
+  width: 5rem;
+  background-image: linear-gradient(65deg, black, grey, lightgrey, red, black 70%);
+  filter: blur(3px);
+
+}
+
+
+.image2 {
+  margin-left: 0;
+  position: absolute;
+  top: 20rem;
+  left: 50rem;
+  z-index: 3;
+
+}
+
+.lijn  {
+  position: absolute;
+  right: 0rem;
+  filter: blur(3px);
+
+}
+
+
+
+.image3 {
+  position: absolute;
+  top: 13rem;
+  left: 40rem;
+  z-index: 4;
+
+}
+
+
+.image4 {
+position: absolute;
+top: 16rem;
+left: 25rem;
+z-index: 4;
+}
+
+.image5 {
+position: absolute;
+left: 25rem;
+top: 40rem;
+z-index: 9;
+transition: transform 1s;
+}
+
+.image5:hover {
+   transform: translate(10px, 50px);
+}
+
+.image7 {
+  position: absolute;
+  z-index:5;
+  top: 37rem;
+  left: 4rem;
+  transition: transform 0.1s;
+}
+
+.image7:hover {
+   transform: translate(20px, 20px);
+}
+
+.image8 {
+  top: 45rem;
+  left: 20rem;
+  z-index:10;
+}
+
+
+
+footer {
+background-color: #333;
+height: 7rem;
+color: white;
+font-family: 'Roboto Condensed', sans-serif;
+text-align: center;
+display: grid;
+padding-top: 2rem;
+padding-bottom: 2rem;
+padding-left: 0rem;
+}
+
+footer  a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+}
+
+.contact p {
+  padding-top: 0.8rem;
+
+}
+
+.contact p:first-child {
+  font-size: 1.5rem;
+}
+
+
+.overmij {
+  width: 30rem;
+  border-right: 1px solid white;
+  padding-left: 5rem;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+  color: white;
+  animation-name: overmij;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overmij {
+0% {left:-1000px;}
+100% {left:0px;}
+}
+
+
+
+.overmij h1 {
+  font-family: 'Marvel', sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.overmij p {
+  font-family:'Roboto Condensed', sans-serif;
+}
+
+.vaardigheden {
+  margin-left: 36rem;
+  border-left: 1px solid white;
+  padding-left: 1rem;
+  margin-right: 22.5rem;
+  color: white;
+  animation-name: vaar;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes vaar {
+  0% { right: -1000px;}
+  100% { right: 0px;}
+}
+
+.vaardigheden h1 {
+font-family: 'Marvel', sans-serif;
+font-size: 1.5rem;
+text-align: right;
+}
+.skillbox {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0 30px 10px;
+}
+.skillbox p {
+  font-size: 'Marvel', sans-serif;
+  letter-spacing: 1px;
+  padding-bottom: 0.1rem;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.skill {
+  padding: 4px;
+  box-sizing: border-box;
+  border: 2px solid #d8d8d8;
+  border-radius: 2px;
+  width: 400px;
+}
+.skill_level {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+
+}
+
+.studies {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  border-right: 1px solid white;
+  width: 30rem;
+  text-align: right;
+  padding-right: 1rem;
+  margin-bottom: 15rem;
+  color: white;
+  animation-name: overmij;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+.studies h1 {
+font-family: 'Marvel', sans-serif;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.studies div {
+      font-family: 'Roboto Condensed', sans-serif;
+      margin-bottom: 1.5rem;
+}
+
+.split {
+  position: absolute;
+  top: 22.7rem;
+  left: 8rem;
+  display: block;
+}
+
+.split img {
+  width: 100%;
+}
+
+
+.text {
+  color: #333;
+  font-size: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: transform 3s;
+  text-align: center;
+  font-family: 'Yatra One', cursive;
+
+}
+
+.text:hover {
+  transform:translate(-10px, -40px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0;
+}
+
+.split:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.text1 {
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top: 5rem;
+  left: ;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: transform 1.5s;
+  text-align: center;
+  font-family: 'Yatra One', cursive;
+  background-color: #0;
+  display: block;
+
+
+}
+
+.text1:hover {
+  transform: rotate(90deg) scale(2) translateY(-50%) translateX(50%);
+}
+
+
+
+.image1:hover .text1 {
+  opacity: 1;
+  z-index: 100;
+}
+
+.fixed {
+      position: fixed;
+         background-image: linear-gradient(180deg,  #333 0%,rgb(89, 93, 91) 100%);
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 8vw;
+      z-index: 20;
+}
+
+.form {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+}
+
+.form h3 {
+  position: relative;
+  top: -2rem;
+  left: -12rem;
+}
+
+.form input, textarea {
+  border-radius: 10%;
+  border: 2px dashed rgb(233, 182, 28);
+}
+
+.form textarea {
+  width: 30%;
+  margin-top: 1rem;
+}
+
+.bericht {
+  position: relative;
+  top: -8rem;
+  margin-right: 2rem;
+}
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+ }
+  }
